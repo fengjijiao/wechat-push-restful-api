@@ -2,7 +2,7 @@ package logio
 
 import (
 	"encoding/json"
-	"github.com/uber-go/zap"
+	"go.uber.org/zap"
 )
 
 var (
