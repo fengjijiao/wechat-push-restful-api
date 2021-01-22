@@ -3,7 +3,7 @@ package httphandler
 import (
 	"fmt"
     "net/http"
-	"../../../wechat-push-restful-api/pkg/conf"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/conf"
 	"sort"
 	"strings"
 	"crypto/sha1"

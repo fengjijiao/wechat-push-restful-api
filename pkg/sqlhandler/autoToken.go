@@ -1,7 +1,7 @@
 package sqlhandler
 
 import (
-	"../../../wechat-push-restful-api/pkg/commonio"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/commonio"
 )
 
 func UpdateTokenAuto() error {

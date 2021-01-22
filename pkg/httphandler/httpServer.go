@@ -3,7 +3,7 @@ package httphandler
 import (
 	"path"
     "net/http"
-	"../../../wechat-push-restful-api/pkg/conf"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/conf"
 )
 
 func Run() error {

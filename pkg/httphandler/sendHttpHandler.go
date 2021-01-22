@@ -3,11 +3,11 @@ package httphandler
 import (
 	"fmt"
     "net/http"
-	"../../../wechat-push-restful-api/pkg/conf"
-	"../../../wechat-push-restful-api/pkg/logio"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/conf"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/logio"
 	"go.uber.org/zap"
 	"path"
-	"../../../wechat-push-restful-api/pkg/sqlhandler"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/sqlhandler"
 	"encoding/json"
 	"github.com/imroc/req"
 )

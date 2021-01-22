@@ -1,7 +1,7 @@
 package commonio
 
 import (
-	"../../../wechat-push-restful-api/pkg/conf"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/conf"
 )
 
 func GetTokenAuto() (*AccessTokenInfo, error) {

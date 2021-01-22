@@ -1,7 +1,6 @@
 #!/bin/bash
-mkdir build
 compiler() {
-  CGO_ENABLED=0 GOOS=$1 GOARCH=$2 go build -trimpath -o build/wpra-${1}-${2} main.go
+  CGO_ENABLED=0 GOOS=$1 GOARCH=$2 go build -trimpath -o bin/wpra-${1}-${2} main.go
 }
 compiler linux amd64
 compiler linux 386

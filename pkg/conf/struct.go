@@ -2,7 +2,7 @@ package conf
 
 import (
 	//"os"
-	"../../../wechat-push-restful-api/pkg/logio"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/logio"
 )
 
 type ConfInfo struct {

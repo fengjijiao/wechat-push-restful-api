@@ -1,8 +1,8 @@
 package sqlhandler
 
 import (
-	"../../../wechat-push-restful-api/pkg/commonio"
-	"../../../wechat-push-restful-api/pkg/conf"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/commonio"
+	"github.com/fengjijiao/wechat-push-restful-api/pkg/conf"
 	"path/filepath"
 	"time"
 	"errors"
