@@ -1,7 +1,6 @@
 package sqlhandler
 
 import (
-	"fmt"
 	"../../../wechat-push-restful-api/pkg/commonio"
 	"../../../wechat-push-restful-api/pkg/conf"
 	"path/filepath"
@@ -18,7 +17,6 @@ func getTokenFilePath() string {
 }
 
 func UpdateToken(token string) error {
-	fmt.Println(conf.Config.WorkDir)
 	return commonio.WriteToFile(getTokenFilePath(), []byte(token))
 }
 
