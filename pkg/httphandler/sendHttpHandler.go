@@ -10,6 +10,7 @@ import (
 	"github.com/fengjijiao/wechat-push-restful-api/pkg/sqlhandler"
 	"encoding/json"
 	"github.com/imroc/req"
+	"bytes"
 )
 
 type SendInfo struct {
@@ -32,7 +33,10 @@ type ErrorInfo struct {
 
 func sendHttpHandler(w http.ResponseWriter, hr *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	if hr.Body == "" {
+	buf := new(bytes.Buffer)
+    buf.ReadFrom(hr.Body)
+    context := buf.String()
+	if context == "" {
 		json.NewEncoder(w).Encode(&ErrorInfo{-1, "send message failed, missing required parameters!"})
 		return
 	}
@@ -42,7 +46,7 @@ func sendHttpHandler(w http.ResponseWriter, hr *http.Request) {
 	sendInfo.TemplateID = conf.Config.WechatTemplateId
 	//sendInfo.URL = path.Join("https://", hr.Header.Get("Host"), "/")
 	sendInfo.Topcolor = "#FF0000"
-	sendInfo.Data.Text.Value = hr.Body
+	sendInfo.Data.Text.Value = context
 	sendInfo.Data.Text.Color = "#173177"
 	param, err := json.Marshal(&sendInfo)
 	if err != nil {
