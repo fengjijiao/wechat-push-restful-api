@@ -23,7 +23,7 @@ func init() {
 	logio.Init()
 	
 	flag.StringVar(&configFilePath, "c", "config.yaml", "configure file location.")
-	flag.BoolVar(&flagQuiet, "-quiet", false, "quiet for log print.")
+	flag.BoolVar(&flagQuiet, "quiet", false, "quiet for log print.")
     flag.Parse()
 	
 	if(flagQuiet) {
