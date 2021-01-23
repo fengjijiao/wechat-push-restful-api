@@ -23,7 +23,7 @@ func verifyHttpHandler(w http.ResponseWriter, req *http.Request) {
 	h := sha1.New()
     h.Write([]byte(strings.Join(stringList, "")))
     bs := h.Sum(nil)
-	if string(bs) == signature {
+	if fmt.Sprintf("%x", bs) == signature {
 		fmt.Fprintf(w, echostr)
 		return
 	}
