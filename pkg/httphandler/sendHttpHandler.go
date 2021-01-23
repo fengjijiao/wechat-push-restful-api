@@ -6,7 +6,7 @@ import (
 	"github.com/fengjijiao/wechat-push-restful-api/pkg/conf"
 	"github.com/fengjijiao/wechat-push-restful-api/pkg/logio"
 	"go.uber.org/zap"
-	"path"
+	//"path"
 	"github.com/fengjijiao/wechat-push-restful-api/pkg/sqlhandler"
 	"encoding/json"
 	"github.com/imroc/req"
