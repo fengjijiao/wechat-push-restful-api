@@ -32,7 +32,7 @@ type ErrorInfo struct {
 
 func sendHttpHandler(w http.ResponseWriter, hr *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	if hr.PostFormValue("context") == "" {
+	if hr.Body == "" {
 		json.NewEncoder(w).Encode(&ErrorInfo{-1, "send message failed, missing required parameters!"})
 		return
 	}
@@ -42,7 +42,7 @@ func sendHttpHandler(w http.ResponseWriter, hr *http.Request) {
 	sendInfo.TemplateID = conf.Config.WechatTemplateId
 	//sendInfo.URL = path.Join("https://", hr.Header.Get("Host"), "/")
 	sendInfo.Topcolor = "#FF0000"
-	sendInfo.Data.Text.Value = hr.PostFormValue("context")
+	sendInfo.Data.Text.Value = hr.Body
 	sendInfo.Data.Text.Color = "#173177"
 	param, err := json.Marshal(&sendInfo)
 	if err != nil {
